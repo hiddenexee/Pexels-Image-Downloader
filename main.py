@@ -10,7 +10,7 @@ class PexelsAPI:
             'Authorization': api_key
         })
         
-        self.keyword = keyword
+        self.keyword = keyword 
 
     def search_photo(self, page = '1') -> dict:
         return self.session.get(f"{self.api_url}search?query={self.keyword}&page={page}&per_page=50").json()
